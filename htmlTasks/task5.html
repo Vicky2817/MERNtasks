@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body{
+            background: linear-gradient(0deg, rgba(195,157,218,1) 0%, rgba(234,197,230,1) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        table,tr,.td1,.th1{
+            border: 1px solid black;
+            border-collapse: collapse;
+            background: #FBEDFB ;
+        }
+        th{
+            width: 150px;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            margin-top: 50px;
+            margin-left: 200px;
+            background: #BCF4C4 ;
+        }
+        h1{
+            text-align: center;
+        }
+      .login{
+        text-align:right;
+        padding: 10px;
+      }
+     
+      .login {
+            text-align: right;
+            padding: 10px;
+        }
+        .declare {
+            padding: 10px;
+        }
+        .input1 {
+            width: 300px; 
+        }
+        #country{
+            width: 307px;
+        }
+        textarea{
+            width: 300px;
+        }
+     
+      
+      
+      
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form >
+        <table>
+            <h1>Registration Form</h1>
+            <tr>
+                <th class="th1">First Name</th>
+                <td class="td1"><input type="text" class="input1"></td>
+            </tr>
+            <tr>
+                <th  class="th1">Last Name</th>
+                <td class="td1"><input type="text" class="input1"></td>
+            </tr>
+            <tr>
+                <th  class="th1">Email</th>
+                <td class="td1"><input type="text" class="input1"></td>
+            </tr>
+            <tr>
+                <th  class="th1">Password</th>
+                <td class="td1"><input type="password" class="input1"></td>
+            </tr>
+            <tr>
+                <th  class="th1">Re-enter Password</th>
+                <td class="td1"><input type="password" class="input1"></td>
+            </tr>
+            <tr >
+                <th  class="th1" rowspan="2" >Gender</th>
+                <td class="td1"><input type="radio"  id="male" name="radio">Male</td>
+                
+               
+            </tr>
+            <tr>
+
+                <td class="td1"><input type="radio"  id="female" name="radio">Female</td>
+                
+            </tr> <tr>
+                <th  class="th1"> Age</th>
+                <td class="td1"><input type="text" class="input1"></td>
+            </tr>
+            <tr>
+                <th  class="th1">Phone Number</th>
+                <td class="td1"><input type="text" class="input1"></td>
+            </tr>
+            <tr>
+                <th  class="th1">Address</th>
+                <td class="td1"><textarea name="address" id="address" cols="38" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <th  class="th1">State</th>
+                <td class="td1"> <input type="text" class="input1"></td>
+            </tr>
+            <tr>
+                <th  class="th1">Country</th>
+                <td><select name="country" id="country">
+                    <option value="India">India</option>
+                    <option value="America">America</option>
+                    <option value="Canada">Canada</option>
+                </select>
+
+                
+                </td>
+            </tr>
+            <tr>
+                <th  class="th1">Languages known</th>
+                <td class="td1">
+                    <input type="checkbox" id="check" name="check"><label for="check">English</label>
+                    <input type="checkbox" id="check" name="check"><label for="check">Kannada</label>
+                    <input type="checkbox" id="check" name="check"><label for="check">Hindi</label>
+                    <input type="checkbox" id="check" name="check"><label for="check">Telugu</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="declare" colspan="2"> <input type="checkbox" >Hereby I declare all the given details are true</td>
+            </tr>
+            <tr>
+                <td class="login" colspan="2">Log in to <a href="https://ethnus.com/">Ethnus</a> website</td>
+            </tr>
+            
+
+           
+        </table>
+        <button type="submit">Register</button>
+    </form>
+    </div>
+</body>
+</html>

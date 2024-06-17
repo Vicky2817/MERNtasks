@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethnus Layout</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom Styles */
+      .navbar-custom {
+        background-color: #6c757d; /* Grey background for navbar */
+      }
+      .ethnus-header {
+        background-color: #00a7c2; /* Blue background for ethnus layout */
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+      .content {
+        padding: 20px;
+        text-align: center; /* Center align content */
+      }
+      .sidebar {
+        background-color: #6c757d;
+        color: white;
+        height: 100vh;
+        padding: 10px;
+      }
+      #side {
+        background-color: #454b50;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="ethnus-header">
+      <h1>Ethnus layout</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 mx-auto content">
+          <h2>Write your content here</h2>
+        </div>
+        <div class="col-md-3 sidebar" id="side">
+          <p>This is the sidebar</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

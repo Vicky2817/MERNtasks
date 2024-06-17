@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 50%;
+        height: 70%;
+        background: linear-gradient(
+          90deg,
+          rgba(228, 192, 239, 1) 0%,
+          rgba(223, 162, 221, 1) 50%,
+          rgb(193, 141, 212) 100%
+        );
+        display: flex;
+        border: 3px solid black;
+      }
+      .container .sidenav {
+        width: 20%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 50px;
+      }
+      .container .sidenav a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Add this line to space content evenly */
+        width: 100%;
+        height: 100%;
+        margin: 5px;
+        text-decoration: none;
+        background-color: aliceblue;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .container .sidenav a:hover {
+        background-color: lightgray;
+      }
+      .container .sidenav a.active {
+        color: blue;
+      }
+      .container .sidenav a::after {
+        content: '';
+        width: 20px;
+        height: 100%;
+        background-color: black;
+      }
+      .container .content {
+        width: 60%;
+        font-size: 20px;
+      }
+      .container .content .para::after {
+        content: '';
+        display: block;
+        width: 100%;
+        background-color: black;
+        height: 2px;
+      } /*hr-horizontal row can also be used*/
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidenav">
+        <a
+          href="https://www.w3schools.com/java/default.asp"
+          target="_blank"
+          class="active"
+          >Java</a
+        >
+        <a href="https://www.w3schools.com/html/default.asp" target="_blank"
+          >HTML</a
+        >
+        <a href="https://www.w3schools.com/css/default.asp" target="_blank"
+          >CSS</a
+        >
+        <a
+          href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp"
+          target="_blank"
+          >BootStrap</a
+        >
+      </div>
+      <div class="content">
+        <h1>My First Styled Page</h1>
+        <p>Welcome to my styled page!</p>
+        <div class="para">
+          <p>
+            It lacks images,but at least it has style.And it <br />
+            has links,even if they don't go anywhere...
+          </p>
+          <p>
+            There should be more here, but I dont't know <br />
+            what yet.
+          </p>
+        </div>
+        <p>
+          <i> Made 16 June 2024</i> <br />
+          <i> by myself</i>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

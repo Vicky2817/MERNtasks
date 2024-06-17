@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML TASK - 2 : LISTS</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+       body{
+        
+        background: linear-gradient(0deg, rgba(195,157,218,1) 0%, rgba(234,197,230,1) 100%);
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+       }
+       div{
+        display: grid;
+        place-items: center;
+        border: 1px solid black;
+        width: 40%;
+       }
+       div{
+        background: white;
+        font-size: 20px;
+
+       }
+       p{
+        font-weight: bold;
+       }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lists can be nested (list inside list) :</p>
+        <ul id="li1">
+            <li>Coffee</li>
+            <li>Tea
+                <ul>
+                    <li>Black tea</li>
+                    <li>Green tea</li>
+                </ul>
+            </li>
+            <li>Milk</li>
+        </ul>
+    </div>
+</body>
+</html>

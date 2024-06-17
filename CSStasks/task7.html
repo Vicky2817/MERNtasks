@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(158, 37, 77);
+      }
+      .container {
+        width: 40%;
+        height: 70%;
+        background: rgb(135, 31, 65);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        width: 90%;
+        height: 90%;
+        padding: 10px;
+      }
+      table {
+        width: 100%;
+        height: 100%;
+      }
+
+      table td label {
+        text-align: left;
+        padding-right: 10px;
+      }
+      table input,
+      table select,
+      table textarea {
+        width: 100%;
+        
+      }
+      table input,
+      table select{
+        height: 30px;
+      }
+      
+      button {
+        width: 100%;
+        padding: 10px;
+        background: white;
+        color: rgb(135, 31, 65);
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      button:hover {
+        background: rgb(10, 120, 10);
+        color: white;
+      }
+      .radio-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td><input type="text" name="name" id="name" /></td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><input type="email" name="mail" id="mail" /></td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td><input type="password" name="pass" id="pass" /></td>
+          </tr>
+          <tr>
+            <td>Gender:</td>
+            <td>
+              <div class="radio-group">
+                <label for="male">Male:</label>
+                <input type="radio" name="gender" id="male" value="male" />
+                <label for="female">Female:</label>
+                <input type="radio" name="gender" id="female" value="female" />
+                <label for="other">Other:</label>
+                <input type="radio" name="gender" id="other" value="other" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Language:</td>
+            <td>
+              <select name="lang" id="lang" required>
+                <option value=>Select a language</option>
+                <option value="English">English</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Telugu">Telugu</option>
+                <option value="Hindi">Hindi</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Zip Code:</td>
+            <td><input type="text" name="zip" id="zip" /></td>
+          </tr>
+          <tr>
+            <td>About:</td>
+            <td>
+              <textarea name="abt" id="abt" rows="3" cols="20" placeholder="Write about yourself..."></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><button type="submit">Register</button></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

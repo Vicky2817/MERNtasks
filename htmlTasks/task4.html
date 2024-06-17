@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body{
+            background: linear-gradient(0deg, rgba(195,157,218,1) 0%, rgba(234,197,230,1) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            width: 25%;
+            border: 1px solid black;
+            padding: 20px;
+            background: #FBEDFB ;
+        }
+        .grp{
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        label{
+            flex: 1;
+        }
+        input,select{
+            flex: 2;
+            padding: 5px;
+        }
+
+        button{
+            background: #BCF4C4 ;
+            width: 25%;
+            height: 30px;
+            margin-left: 150px;
+            margin-top: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <form >
+        <div class="grp">
+            <label for="name">Fullname:</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="grp">
+            <label for="uname">Username:</label>
+            <input type="text" name="uname" id="uname">
+        </div>
+        <div class="grp">
+            <label for="pass">Password:</label>
+            <input type="password" name="pass" id="pass">
+        </div>
+        <div class="grp">
+            <label for="repass">Re Password:</label>
+            <input type="password" name="repass" id="repass">
+        </div>
+        <div class="grp">
+            <label for="address">Address:</label>
+            <input type="text" name="address" id="address">
+        </div>
+        
+        <div class="grp">
+            <label for="age">Age:</label>
+            <input type="text" name="age" id="age">
+        </div>
+        <div class="grp">
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+        <div class="grp">
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</body>
+</html>

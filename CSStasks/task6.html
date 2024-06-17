@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 30%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        padding: 10px;
+      }
+
+      .container .profilePic {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        margin: auto;
+        align-items: center;
+      }
+      .container .profilePic img {
+        border-radius: 150px;
+      }
+      .container .login {
+        width: 95%;
+        height: 40%;
+        margin-bottom: 30px;
+      }
+      .container .cancel {
+        width: 100%;
+        height: 10%;
+        background: rgb(232, 224, 224);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .container .cancel button {
+        width: 20%;
+        height: 70%;
+        margin-top: 15px;
+        background-color: rgb(224, 67, 67);
+        color: white;
+      }
+      .container .login {
+        padding: 10px;
+      }
+      .container .login button {
+        width: 100%;
+        height: 30px;
+        background-color: #0f9655;
+        color: white;
+      }
+      .inp1 {
+        width: 100%;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="profilePic">
+        <img src="images/profile.png" alt="" />
+      </div>
+      <div class="login">
+        <form>
+          <label for="uname">Username</label><br />
+          <input
+            type="text"
+            name="uname"
+            id="uname"
+            class="inp1"
+            placeholder="Enter Username"
+          /><br /><br />
+          <label for="pass">Password</label><br />
+          <input
+            type="password"
+            name="pass"
+            id="pass"
+            class="inp1"
+            placeholder="Enter Password"
+          /><br /><br />
+          <button type="submit">Login</button><br /><br />
+          <input type="checkbox" name="remember" id="remember" />
+          <label for="remember">Remember me</label>
+        </form>
+      </div>
+      <div class="cancel">
+        <button type="button">Cancel</button>
+        <a href="">Forgot Password ?</a>
+      </div>
+    </div>
+  </body>
+</html>
