@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20MIS1028-Jstask3</title>
+    <style>
+      body {
+        background-color: lightskyblue;
+      }
+    </style>
+    <script>
+      function calculate(operation) {
+        // Get the input values
+        const num1 = parseFloat(document.getElementById('num1').value);
+        const num2 = parseFloat(document.getElementById('num2').value);
+
+        let result;
+
+        // Perform the operation
+        if (operation === 'multiply') {
+          result = num1 * num2;
+        } else if (operation === 'divide') {
+          if (num2 !== 0) {
+            result = num1 / num2;
+          } else {
+            result = 'Error: Division by zero';
+          }
+        }
+
+        // Display the result
+        document.getElementById(
+          'result'
+        ).textContent = `The Result is: ${result}`;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Multiplication and Division Calculator</h1>
+    <label for="num1"> 1st Number: </label>
+    <input type="number" id="num1" required />
+    <br />
+    <br />
+    <label for="num2">2nd Number: </label>
+    <input type="number" id="num2" required />
+    <br /><br />
+    <button onclick="calculate('multiply')">Multiply</button>
+    <button onclick="calculate('divide')">Divide</button>
+    <p id="result"></p>
+  </body>
+</html>

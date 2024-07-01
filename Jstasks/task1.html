@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20MIS1028-Jstask1</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgoldenrodyellow;
+      }
+      .container {
+        width: 40%;
+        height: 40vh;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+          0deg,
+          rgba(250, 230, 141, 1) 0%,
+          rgba(237, 168, 196, 1) 100%
+        );
+      }
+      .item {
+        font-size: x-large;
+      }
+      .item input {
+        font-size: 20px;
+        height: 30px;
+      }
+      button {
+        height: 30px;
+        font-size: 20px;
+      }
+      p {
+        border: 1px solid black;
+        height: 30px;
+        width: 40%;
+        background-color: white;
+        color: black;
+        padding-top: 5px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <label for="inp">Enter a number :</label>
+        <input type="text" id="inp" name="inp" /><br /><br />
+      </div>
+      <button onclick="reverse()">Reverse number</button>
+      <p id="ans"></p>
+    </div>
+    <script>
+      function reverse() {
+        let num = parseInt(document.getElementById('inp').value);
+        let reversed = 0;
+        while (num != 0) {
+          let remainder = num % 10;
+          reversed = reversed * 10 + remainder;
+          num = Math.floor(num / 10);
+        }
+        document.getElementById('ans').innerHTML = reversed;
+      }
+    </script>
+  </body>
+</html>

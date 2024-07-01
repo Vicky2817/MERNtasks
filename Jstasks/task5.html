@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20MIS1028-Jstask5</title>
+    <style>
+      .error {
+        color: red;
+        display: none;
+      }
+      .error-field {
+        border: 1px solid red;
+      }
+      body {
+        background-color: lightcyan;
+      }
+    </style>
+    <script>
+      function validateForm() {
+        let isValid = true;
+
+        // Get form elements
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const website = document.getElementById('website');
+        const message = document.getElementById('message');
+
+        // Name validation
+        if (name.value.trim() === '') {
+          isValid = false;
+          name.classList.add('error-field');
+          document.getElementById('nameError').style.display = 'inline';
+        } else {
+          name.classList.remove('error-field');
+          document.getElementById('nameError').style.display = 'none';
+        }
+
+        // Email validation
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!emailPattern.test(email.value)) {
+          isValid = false;
+          email.classList.add('error-field');
+          document.getElementById('emailError').style.display = 'inline';
+        } else {
+          email.classList.remove('error-field');
+          document.getElementById('emailError').style.display = 'none';
+        }
+
+        // Website validation
+        const urlPattern = /^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-]*)*$/;
+        if (!urlPattern.test(website.value)) {
+          isValid = false;
+          website.classList.add('error-field');
+          document.getElementById('websiteError').style.display = 'inline';
+        } else {
+          website.classList.remove('error-field');
+          document.getElementById('websiteError').style.display = 'none';
+        }
+
+        // Message validation
+        if (message.value.trim() === '') {
+          isValid = false;
+          message.classList.add('error-field');
+          document.getElementById('messageError').style.display = 'inline';
+        } else {
+          message.classList.remove('error-field');
+          document.getElementById('messageError').style.display = 'none';
+        }
+
+        return isValid;
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <span id="nameError" class="error">This field is required</span>
+      <br /><br />
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" />
+      <span id="emailError" class="error"
+        >A valid email address is required</span
+      >
+      <br /><br />
+
+      <label for="website">Website:</label>
+      <input type="text" id="website" name="website" />
+      <span id="websiteError" class="error">A valid url is required</span>
+      <br /><br />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message"></textarea>
+      <span id="messageError" class="error">This field is required</span>
+      <br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
